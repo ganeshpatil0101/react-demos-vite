@@ -1,6 +1,7 @@
 export function fetchData(URL) {
    return fetch(URL).then((res) => {
-        return res.json();
+        const data = res.json()
+        return data;
     }).catch((e)=>{
         console.error(e);
     });
