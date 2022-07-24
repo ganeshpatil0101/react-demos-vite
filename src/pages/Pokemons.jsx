@@ -33,7 +33,9 @@ export default function Pockemons() {
     if(error) return 'An error has occurred: '+error.message
     return (
         <>
-            {data.results.map((p)=> (<Pokemon key={p.name} pokemon={p} />))}
+            <div className="pokemon-container" >
+                {data.results.map((p)=> (<Pokemon key={p.name} pokemon={p} />))}
+            </div>
         </>
     );
 };
