@@ -8,7 +8,8 @@ import {BrowserRouter , Routes, Route} from 'react-router-dom';
 import Landing from './pages/Landing';
 import Hello from './pages/Hello';
 const Pockemons = React.lazy(()=> import('./pages/Pokemons'));
-const Wordle = React.lazy(()=> import('./pages/Wordle/index'));
+// const Wordle = React.lazy(()=> import('./pages/Wordle/index'));
+import Wordle from './pages/Wordle';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -32,9 +33,9 @@ function App() {
                 </Suspense>
               } />
               <Route path="wordle" element={
-                <Suspense fallback={<><span>Loading ... </span></>} >
+                // <Suspense fallback={<><span>Loading ... </span></>} >
                   <Wordle />
-                </Suspense>
+                // </Suspense>
               } />
               <Route path="hello" element={<Hello />} />
             </Route>

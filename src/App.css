@@ -70,3 +70,33 @@ details[open] summary {
 .content{
   display: flex;
 }
+.wordle-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px;
+}
+.line{
+  display: flex;
+  gap: 5px;
+}
+
+.box{
+  height: 50px;
+  width: 50px;
+  border: black 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.correct{
+  background-color:lightgreen;
+}
+.rightChar{
+  background-color:lightyellow;
+}
+.wrong{
+  background-color:lightgray;
+}
